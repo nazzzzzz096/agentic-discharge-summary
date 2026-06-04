@@ -1,11 +1,10 @@
-import google.generativeai as genai
-from config import MODEL_NAME,GEMINI_API_KEY
+from google import genai
+from backend.config import MODEL_NAME,GEMINI_API_KEY
 
-genai.configure(api_key=GEMINI_API_KEY)
+client = genai.Client(api_key=GEMINI_API_KEY)
 
-model=genai.GenerativeModel(MODEL_NAME)
 
-response=model.generate_content("Reply: Gemini Connection Successful")
+response=client.models.generate_content(model=MODEL_NAME,contents="Reply: Gemini Connection Successful")
 
 print(response.text)
 
