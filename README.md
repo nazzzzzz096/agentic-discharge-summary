@@ -334,3 +334,14 @@ Upload a patient PDF and generate a discharge-summary draft.
 This system is intended only to assist clinicians by generating draft discharge summaries.
 
 It must not be used to make autonomous clinical decisions and always requires clinician review before use.
+
+Part 2 Status
+
+Part 2 was not implemented due to time constraints.
+
+With additional time, I would implement:
+- Simulated clinician reviewer
+- Draft/corrected summary dataset generation
+- Edit-distance reward metric
+- Correction memory system
+- Evaluation on held-out patients
